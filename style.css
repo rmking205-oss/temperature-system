@@ -1,0 +1,156 @@
+/* ===== General Page Styling ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== Main Container ===== */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ===== Converter Box ===== */
+
+.converter-box {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Heading ===== */
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.description {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* ===== Form ===== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: bold;
+}
+
+/* ===== Input and Dropdown ===== */
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* ===== Convert Button ===== */
+
+#convertBtn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #667eea;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#convertBtn:hover:not(:disabled) {
+    background-color: #5568d8;
+    transform: translateY(-2px);
+}
+
+#convertBtn:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+/* ===== Result Section ===== */
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f5f6ff;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e0e3ff;
+}
+
+.result h2 {
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#resultText {
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .converter-box {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    #convertBtn {
+        font-size: 15px;
+    }
+}
